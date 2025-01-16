@@ -1,0 +1,325 @@
+/* learning flexbox */
+body{
+  margin: 0;
+  color: #F2EFED;
+  background-color: #221734;
+  font-family: 'Poppins', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+p{
+    font-size: large;
+}
+a {
+  color: inherit;
+  outline: none;
+}
+.who_me{
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-top: 10% ;
+  background-color: #F2EFED;
+ padding-bottom: 3%;
+}
+
+.about_me{
+    background-color: #6C9CC8;
+    color:#262247;
+    padding: 10px;
+    border-radius:0.5em;
+    border-width: 3px;
+    box-shadow: -7px -7px 11px rgba(255, 255, 255, 0.8),
+      7px 7px 12px rgba(0, 0, 0, 0.4);
+} 
+.goals{
+    background-color: #262247;
+    color: #F2EFED;
+    padding: 10px;
+    border-radius:0.5em;
+    border-width: 3px;
+    box-shadow: -7px -7px 11px rgba(255, 255, 255, 0.8),
+        7px 7px 12px rgba(0, 0, 0, 0.4);
+}
+.slideshow{
+display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  button{
+ border-color: #262247;
+  background-color: black;
+  color: #F2EFED;
+  cursor: pointer;
+  margin: 0;
+  column-gap: 10px;
+  font: 100px;
+  }
+}
+.footer{
+  display: flex;
+  justify-content: flex-end;
+  background-color: #1f1b24;
+  font-size: larger;
+  color: #F2EFED  ;
+
+}
+
+/* navcon and header*/
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #1f1b24;
+    color: #F2EFED;
+    padding: 1rem;
+  }
+  
+  .nav {
+ height: 100%;
+ width: 0;
+   position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #1f1b24;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.7s;
+  }
+  
+  .nav a {
+    display: block;
+    padding: 20px 30px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #ccc;
+  }
+  
+  .nav a:hover {
+    color: #fff;
+    transition: 0.4s;
+  }
+  
+  .nav .close {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .slide a {
+    color: #fff;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .slide a .menu {
+    padding-left: 0.4rem;
+  }
+  
+  .overlay {
+    background-color: #221734;
+    z-index: 5;
+  }
+  .logo{
+    margin-left: 16%;
+  }
+  .contact{
+    padding-right: 30px;
+  }
+/* Mmedia stuff */
+.Modules{ 
+   display: grid;
+  padding-top: 7%;
+  grid-template-columns: repeat(2, 1fr);
+  gap:50px;
+  grid-auto-rows: minmax(100px, auto);
+}
+#part1{
+  color: #262247;
+  background-color: #F2EFED;
+  padding-left:  5%;
+  padding-right: 5%;
+  padding-bottom: 2%;
+}
+#part2{
+  color: #F2EFED;
+  background-color: #262247;
+  padding-left:  5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#Proposal{
+  padding-top: 7%;
+
+}
+.v1{
+  background-color: #F2EFED;
+  color: #221734;
+  padding: 1%;
+}
+/* i borowed this code permently from codepen ; https://codepen.io*/
+.modani {
+  --c: #6C9CC8; /* the color */
+  --b: .5em;    /* border length*/
+  --d: 20px;    /* the cube depth */
+  
+  --_s: calc(var(--d) + var(--b));
+ 
+  padding: 1%;
+  
+  border: solid #0000;
+  border-width: var(--b) var(--b) var(--_s) var(--_s);
+  background:
+    conic-gradient(at left var(--d)  bottom var(--d),
+      #0000 90deg, rgb(255 255 255 /0.3) 0 225deg,rgba(192, 182, 182, 0.6) 0) border-box,
+    conic-gradient(at left var(--_s) bottom var(--_s),
+      #0000 90deg,var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b))  border-box;
+  transform: translate(calc(var(--d)/-1),var(--d));
+  clip-path: 
+    polygon(
+     var(--d) 0%, 
+     var(--d) 0%, 
+     100% 0%, 
+     100% calc(100% - var(--d)),
+     100% calc(100% - var(--d)),
+     var(--d) calc(100% - var(--d))
+    );
+  transition: 0.5s;
+}
+.modani:hover {
+  transform: translate(0,0);
+  clip-path: 
+    polygon(
+     0% var(--d), 
+     var(--d) 0%, 
+     100% 0%, 
+     100% calc(100% - var(--d)), 
+     calc(100% - var(--d)) 100%, 
+     0% 100%
+   );
+}
+.modvec {
+  --c: #855832 ; /* the color */
+  --b: .5em;    /* border length*/
+  --d: 20px;    /* the cube depth */
+  
+  --_s: calc(var(--d) + var(--b));
+ 
+  padding: 1%;
+  border: solid #0000;
+  border-width: var(--b) var(--b) var(--_s) var(--_s);
+  background:
+    conic-gradient(at left var(--d)  bottom var(--d),
+      #0000 90deg, rgb(255 255 255 /0.3) 0 225deg,rgba(192, 182, 182, 0.6) 0) border-box,
+    conic-gradient(at left var(--_s) bottom var(--_s),
+      #0000 90deg,var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b))  border-box;
+  transform: translate(calc(var(--d)/-1),var(--d));
+  clip-path: 
+    polygon(
+     var(--d) 0%, 
+     var(--d) 0%, 
+     100% 0%, 
+     100% calc(100% - var(--d)),
+     100% calc(100% - var(--d)),
+     var(--d) calc(100% - var(--d))
+    );
+  transition: 0.5s;
+}
+.modvec:hover {
+  transform: translate(0,0);
+  clip-path: 
+    polygon(
+     0% var(--d), 
+     var(--d) 0%, 
+     100% 0%, 
+     100% calc(100% - var(--d)), 
+     calc(100% - var(--d)) 100%, 
+     0% 100%
+   );
+}
+.modphoto {
+  --c: #214ED3; /* the color */
+  --b: .5em;    /* border length*/
+  --d: 20px;    /* the cube depth */
+  
+  --_s: calc(var(--d) + var(--b));
+ 
+  padding: 1%;
+  border: solid #0000;
+  border-width: var(--b) var(--b) var(--_s) var(--_s);
+  background:
+    conic-gradient(at left var(--d)  bottom var(--d),
+      #0000 90deg, rgb(255 255 255 /0.3) 0 225deg,rgba(192, 182, 182, 0.6) 0) border-box,
+    conic-gradient(at left var(--_s) bottom var(--_s),
+      #0000 90deg,var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b))  border-box;
+  transform: translate(calc(var(--d)/-1),var(--d));
+  clip-path: 
+    polygon(
+     var(--d) 0%, 
+     var(--d) 0%, 
+     100% 0%, 
+     100% calc(100% - var(--d)),
+     100% calc(100% - var(--d)),
+     var(--d) calc(100% - var(--d))
+    );
+  transition: 0.5s;
+}
+.modphoto:hover {
+  transform: translate(0,0);
+  clip-path: 
+    polygon(
+     0% var(--d), 
+     var(--d) 0%, 
+     100% 0%, 
+     100% calc(100% - var(--d)), 
+     calc(100% - var(--d)) 100%, 
+     0% 100%
+   );
+}
+.modras {
+  --c: #D9BB82; /* the color */
+  --b: .5em;    /* border length*/
+  --d: 20px;    /* the cube depth */
+  
+  --_s: calc(var(--d) + var(--b));
+ 
+  padding: 1%;
+  border: solid #0000;
+  border-width: var(--b) var(--b) var(--_s) var(--_s);
+  background:
+    conic-gradient(at left var(--d)  bottom var(--d),
+      #0000 90deg, rgb(255 255 255 /0.3) 0 225deg,rgba(192, 182, 182, 0.6) 0) border-box,
+    conic-gradient(at left var(--_s) bottom var(--_s),
+      #0000 90deg,var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b))  border-box;
+  transform: translate(calc(var(--d)/-1),var(--d));
+  clip-path: 
+    polygon(
+     var(--d) 0%, 
+     var(--d) 0%, 
+     100% 0%, 
+     100% calc(100% - var(--d)),
+     100% calc(100% - var(--d)),
+     var(--d) calc(100% - var(--d))
+    );
+  transition: 0.5s;
+}
+.modras:hover {
+  transform: translate(0,0);
+  clip-path: 
+    polygon(
+     0% var(--d), 
+     var(--d) 0%, 
+     100% 0%, 
+     100% calc(100% - var(--d)), 
+     calc(100% - var(--d)) 100%, 
+     0% 100%
+   );
+}
